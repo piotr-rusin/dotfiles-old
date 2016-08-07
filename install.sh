@@ -25,3 +25,4 @@ echo "Creating symbolic links"
 
 # fish shell configuration files
 symlink fish .config/fish
+symlink virtualenv .virtualenvs
