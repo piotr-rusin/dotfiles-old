@@ -1,5 +1,5 @@
 function fish_prompt --description 'Write out the prompt'
-	
+
 	# Just calculate these once, to save a few cycles when displaying the prompt
 	if not set -q __fish_prompt_hostname
 		set -g __fish_prompt_hostname (hostname|cut -d . -f 1)
@@ -21,7 +21,7 @@ function fish_prompt --description 'Write out the prompt'
 			end
 		end
 
-		echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" '# '
+		set ending '# '
 
 		case '*'
 
@@ -29,9 +29,11 @@ function fish_prompt --description 'Write out the prompt'
 			set -g __fish_prompt_cwd (set_color $fish_color_cwd)
 		end
 
-		echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" '> '
+		set ending '> '
 
 	end
+
+	echo -n -s "$USER" @ "$__fish_prompt_hostname" ' ' "$__fish_prompt_cwd" (prompt_pwd) "$__fish_prompt_normal" $ending
 
 	if set -q VIRTUAL_ENV
     		echo -n -s (set_color -b blue white) "(" (basename "$VIRTUAL_ENV") ")" (set_color normal) " "
