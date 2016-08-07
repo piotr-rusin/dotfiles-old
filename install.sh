@@ -13,6 +13,14 @@ if [ ! -e $dotfiles/.git ]
         cd $dotfiles && git pull
 fi
 
+symlink() {
+    destination="$HOME/$2"
+
+    mkdir -p $destination
+    ln -sni "$dotfiles/$1/"* $destination
+}
+
+
 echo "Creating symbolic links"
 
 # fish shell configuration files
