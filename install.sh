@@ -24,7 +24,4 @@ symlink() {
 echo "Creating symbolic links"
 
 # fish shell configuration files
-fish_dir="$HOME/.config/fish/"
-
-mkdir -p $fish_dir
-ln -sni $dotfiles/fish/* $fish_dir
+symlink fish .config/fish
