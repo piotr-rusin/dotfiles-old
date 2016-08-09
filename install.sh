@@ -13,7 +13,7 @@ if [ ! -e $dotfiles/.git ]
         cd $dotfiles && git pull
 fi
 
-symlink() {
+lns() {
     destination="$HOME/$2"
 
     mkdir -p $destination
@@ -24,5 +24,5 @@ symlink() {
 echo "Creating symbolic links"
 
 # fish shell configuration files
-symlink fish .config/fish
-symlink virtualenv .virtualenvs
+lns fish .config/fish
+lns virtualenv .virtualenvs
