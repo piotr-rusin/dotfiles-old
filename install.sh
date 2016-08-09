@@ -2,24 +2,27 @@
 
 dotfiles="$HOME/.dotfiles"
 current_dir=$(pwd)
-abort="Aborting installation"
 
-if [ -d $dotfiles ]; then
-    if [ -L $dotfiles ]; then
-        while true; do
-            echo "A link $dotfiles already exists"
-            read -p "Do you want to override it?" yn
-            case $yn in
-                [Yy]* ) break;;
-                [Nn]* ) echo $abort; exit;;
-                * ) echo "Please answer yes or no.";;
-            esac
-        done
-    else
-        echo "$dotfiles already exists, and it's a directory. $abort"
-        exit
-    fi
+abort() {
+    echo "Aborting installation"
+    exit
+}
+
+
+echo "This script may overwrite files in your home directory."
+read -p "Are you sure you want to continue? (Y/n)" -n 1 -r
+echo ""
+if ! [[ $REPLY =~ ^[Yy]$ ]]
+then
+    abort
 fi
+
+
+if [ -d $dotfiles ] && ! [ -L $dotfiles ]; then
+    echo "$dotfiles already exists, and it's a directory."
+    abort
+fi
+
 
 echo "Creating a symbolic link from $current_dir to $dotfiles"
 ln -Tsf $(pwd) $dotfiles
