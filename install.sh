@@ -37,6 +37,5 @@ lns() {
 
 echo "Creating symbolic links"
 
-# fish shell configuration files
 lns fish .config/fish
 lns virtualenv .virtualenvs
