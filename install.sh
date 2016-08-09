@@ -31,7 +31,7 @@ lns() {
     destination="$HOME/$2"
 
     mkdir -p $destination
-    ln -sni "$dotfiles/$1/"* $destination
+    ln -snf "$dotfiles/$1/"* $destination
 }
 
 
