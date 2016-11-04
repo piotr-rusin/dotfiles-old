@@ -1,7 +1,5 @@
 #!/bin/bash
 
-dotfiles="$HOME/.dotfiles"
-
 abort() {
     echo "Aborting installation"
     exit
@@ -16,6 +14,8 @@ then
     abort
 fi
 
+
+dotfiles="$HOME/.dotfiles"
 
 if [ -d $dotfiles ] && ! [ -L $dotfiles ]; then
     echo "$dotfiles already exists, and it's a directory."
