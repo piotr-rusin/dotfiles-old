@@ -29,7 +29,7 @@ function reset_paths \
 end
 
 
-function is_no_virtual_env_active
+function is_no_virtualenv_active
     not set -q VIRTUAL_ENV
 end
 
@@ -37,7 +37,7 @@ end
 function nvim \
     -d "Run neovim in a python virtual environment"
 
-    if is_no_virtual_env_active
+    if is_no_virtualenv_active
         vf activate neovim
     end
 
@@ -54,7 +54,7 @@ function add_idle_py \
     --on-event virtualenv_did_create
 
     set -l ERROR_COLOR (set_color --bold red)
-    if is_no_virtual_env_active
+    if is_no_virtualenv_active
         echo "$ERROR_COLOR No virtualenv is active!"
     else
         cp "$HOME/.virtualenvs/idle.py" "$VIRTUAL_ENV/bin"
