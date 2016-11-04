@@ -1,7 +1,6 @@
 #!/bin/bash
 
 dotfiles="$HOME/.dotfiles"
-current_dir=$(pwd)
 
 abort() {
     echo "Aborting installation"
