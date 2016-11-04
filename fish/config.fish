@@ -2,7 +2,7 @@ set __OLD_PATH $PATH
 set __OLD_PYTHONPATH $PYTHONPATH
 
 
-function is_virtual_env_neovim
+function is_neovim_active_virtualenv
     [ (basename "$VIRTUAL_ENV") = neovim ]
 end
 
@@ -11,7 +11,7 @@ function add_neovim_to_paths \
     -d "Add neovim-related python packages to PATH and PYTHONPATH" \
     --on-event virtualenv_will_activate
 
-    if not is_virtual_env_neovim
+    if not is_neovim_active_virtualenv
         set -gx PYTHONPATH \
         "$HOME/.virtualenvs/neovim/lib/python/site-packages" $PYTHONPATH
 
@@ -43,7 +43,7 @@ function nvim \
 
     command nvim
 
-    if is_virtual_env_neovim
+    if is_neovim_active_virtualenv
         vf deactivate
     end
 end
