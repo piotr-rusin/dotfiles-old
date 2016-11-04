@@ -35,7 +35,5 @@ colorscheme one
 
 let g:airline_powerline_fonts = 1
 
-" Setting rulers: at 50 for summary and at 72 for description
-let &colorcolumn="50,".join(range(72,999),",")
 let g:python3_host_prog='~/.virtualenvs/neovim_py3/bin/python'
 
