@@ -1,3 +1,6 @@
+function is_virtual_env_neovim
+    [ (basename "$VIRTUAL_ENV") = neovim ]
+end
 
 
 function is_no_virtual_env_active
