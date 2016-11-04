@@ -37,8 +37,8 @@ lns() {
 echo "Creating symbolic links"
 
 lns fish .config/fish
-lns virtualenv .virtualenvs
 
+ln -sf "$dotfiles/idle.py" "$HOME/.virtualenvs"
 ln -sf "$dotfiles/nvim" "$HOME/.config"
 ln -sf "$dotfiles/composer.json" "$HOME/.config/composer"
 
