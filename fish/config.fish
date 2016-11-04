@@ -1,3 +1,7 @@
+set __OLD_PATH $PATH
+set __OLD_PYTHONPATH $PYTHONPATH
+
+
 function is_virtual_env_neovim
     [ (basename "$VIRTUAL_ENV") = neovim ]
 end
@@ -13,6 +17,15 @@ function add_neovim_to_paths \
 
         set -gx PATH "$HOME/.virtualenvs/neovim/bin" $PATH
     end
+end
+
+
+function reset_paths \
+    -d "Reset PATH and PYTHONPATH to their former values" \
+    --on-event virtualenv_did_deactivate
+
+    set -gx PYTHONPATH $__OLD_PYTHONPATH
+    set -gx PATH $__OLD_PATH
 end
 
 
