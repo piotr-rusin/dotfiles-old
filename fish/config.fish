@@ -34,6 +34,21 @@ function is_no_virtual_env_active
 end
 
 
+function nvim \
+    -d "Run neovim in a python virtual environment"
+
+    if is_no_virtual_env_active
+        vf activate neovim
+    end
+
+    command nvim
+
+    if is_virtual_env_neovim
+        vf deactivate
+    end
+end
+
+
 function add_idle_py \
     -d "Add idle.py to a newly created virtual environment" \
     --on-event virtualenv_did_create
