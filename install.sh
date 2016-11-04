@@ -39,3 +39,5 @@ echo "Creating symbolic links"
 
 lns fish .config/fish
 lns virtualenv .virtualenvs
+
+ln -sf "$dotfiles/nvim" "$HOME/.config"
