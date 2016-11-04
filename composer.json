@@ -1,0 +1,9 @@
+{
+    "require": {
+        "pdepend/pdepend": "^2.2",
+        "friendsofphp/php-cs-fixer": "^1.11",
+        "leaphub/phpcs-symfony2-standard": "~2.0.0",
+        "phpmd/phpmd": "^2.4",
+        "escapestudios/symfony2-coding-standard": "~2.0"
+    }
+}

@@ -41,6 +41,7 @@ lns fish .config/fish
 lns virtualenv .virtualenvs
 
 ln -sf "$dotfiles/nvim" "$HOME/.config"
+ln -sf "$dotfiles/composer.json" "$HOME/.config/composer"
 
 echo "Configuring git"
 
