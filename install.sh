@@ -41,3 +41,7 @@ lns fish .config/fish
 lns virtualenv .virtualenvs
 
 ln -sf "$dotfiles/nvim" "$HOME/.config"
+
+echo "Configuring git"
+
+git config --global core.editor "nvim -u $HOME/.config/nvim/git_init.vim"
