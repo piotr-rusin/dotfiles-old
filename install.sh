@@ -26,7 +26,7 @@ fi
 echo "Creating a symbolic link from $current_dir to $dotfiles"
 ln -Tsf $(pwd) $dotfiles
 
-lns() {
+link_contents() {
     destination="$HOME/$2"
 
     mkdir -p $destination
@@ -36,7 +36,7 @@ lns() {
 
 echo "Creating symbolic links"
 
-lns fish .config/fish
+link_contents fish .config/fish
 
 ln -sf "$dotfiles/idle.py" "$HOME/.virtualenvs"
 ln -sf "$dotfiles/nvim" "$HOME/.config"
