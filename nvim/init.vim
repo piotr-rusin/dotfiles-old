@@ -59,9 +59,10 @@ set lazyredraw
 set ruler
 set showmatch
 
-set termguicolors
+set t_Co=256
+" set termguicolors
 set background=dark
-colorscheme one
+colorscheme onedark
 
 let g:airline_powerline_fonts = 1
 let g:airline_exclude_preview = 1
