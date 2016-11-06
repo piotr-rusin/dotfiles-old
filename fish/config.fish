@@ -13,7 +13,7 @@ function add_neovim_to_paths \
 
     if not is_neovim_active_virtualenv
         set -gx PYTHONPATH \
-        "$HOME/.virtualenvs/neovim/lib/python/site-packages" $PYTHONPATH
+        "$HOME/.virtualenvs/neovim/lib/python3.5/site-packages" $PYTHONPATH
 
         set -gx PATH "$HOME/.virtualenvs/neovim/bin" $PATH
     end
