@@ -9,7 +9,6 @@ end
 
 function add_neovim_to_paths \
     -d "Add neovim-related python packages to PATH and PYTHONPATH" \
-    --on-event virtualenv_will_activate
 
     if not is_neovim_active_virtualenv
         set -gx PYTHONPATH \
@@ -22,7 +21,6 @@ end
 
 function reset_paths \
     -d "Reset PATH and PYTHONPATH to their former values" \
-    --on-event virtualenv_did_deactivate
 
     set -gx PYTHONPATH $__OLD_PYTHONPATH
     set -gx PATH $__OLD_PATH
@@ -35,16 +33,18 @@ end
 
 
 function nvim \
-    -d "Run neovim in a python virtual environment"
+    -d "Run neovim with support for deoplete and pylama maker"
 
-    if is_no_virtualenv_active
-        vf activate neovim
-    end
+    begin
+        # python packages required by deoplete are installed
+        # in the virtualenv
+        set -lx PYTHONPATH $PYTHONPATH \
+        "$HOME/.virtualenvs/neovim/lib/python3.5/site-packages"
+        # neomake needs to be able to access pylama installed
+        # in the virtualenv
+        set -lx PATH $PATH "$HOME/.virtualenvs/neovim/bin"
 
-    command nvim
-
-    if is_neovim_active_virtualenv
-        vf deactivate
+        command nvim
     end
 end
 
