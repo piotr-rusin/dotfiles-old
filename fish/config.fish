@@ -1,8 +1,3 @@
-function is_no_virtualenv_active
-    not set -q VIRTUAL_ENV
-end
-
-
 function add_idle_py \
     -d "Add idle.py to a newly created virtual environment" \
     --on-event virtualenv_did_create
