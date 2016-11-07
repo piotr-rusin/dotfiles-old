@@ -1,6 +1,3 @@
-set __OLD_PATH $PATH
-set __OLD_PYTHONPATH $PYTHONPATH
-
 function is_no_virtualenv_active
     not set -q VIRTUAL_ENV
 end
