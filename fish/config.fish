@@ -7,18 +7,6 @@ function is_neovim_active_virtualenv
 end
 
 
-function add_neovim_to_paths \
-    -d "Add neovim-related python packages to PATH and PYTHONPATH" \
-
-    if not is_neovim_active_virtualenv
-        set -gx PYTHONPATH \
-        "$HOME/.virtualenvs/neovim/lib/python3.5/site-packages" $PYTHONPATH
-
-        set -gx PATH "$HOME/.virtualenvs/neovim/bin" $PATH
-    end
-end
-
-
 function is_no_virtualenv_active
     not set -q VIRTUAL_ENV
 end
