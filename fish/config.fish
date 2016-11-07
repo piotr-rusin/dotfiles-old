@@ -19,14 +19,6 @@ function add_neovim_to_paths \
 end
 
 
-function reset_paths \
-    -d "Reset PATH and PYTHONPATH to their former values" \
-
-    set -gx PYTHONPATH $__OLD_PYTHONPATH
-    set -gx PATH $__OLD_PATH
-end
-
-
 function is_no_virtualenv_active
     not set -q VIRTUAL_ENV
 end
