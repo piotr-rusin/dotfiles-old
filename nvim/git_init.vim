@@ -35,6 +35,3 @@ set background=dark
 colorscheme onedark
 
 let g:airline_powerline_fonts = 1
-
-let g:python3_host_prog='~/.virtualenvs/neovim_py3/bin/python'
-
