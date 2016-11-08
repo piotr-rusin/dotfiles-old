@@ -75,14 +75,14 @@ nmap <silent> <C-t> :NERDTreeToggle<CR>
 " Set F2 to put the cursor to the nerdtree
 nmap <silent> <F2> :NERDTreeFind<CR>
 
+let g:python3_host_prog=$HOME.'/.virtualenvs/neovim/bin/python'
+
 call deoplete#enable()
 autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 let deoplete#sources#jedi#show_docstring = 1
 
 " Maximum comment length ruler for Python
 let &colorcolumn=72
-
-let g:python3_host_prog='~/.virtualenvs/neovim/bin/python'
 
 let g:neomake_python_pylama_maker = {
       \ 'exe': 'pylama',
