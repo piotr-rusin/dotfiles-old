@@ -87,7 +87,8 @@ let g:python3_host_prog='~/.virtualenvs/neovim/bin/python'
 let g:neomake_python_pylama_maker = {
       \ 'exe': 'pylama',
       \ 'args': ['--format', 'pep8', '--linters',
-      \ 'pydocstyle,pycodestyle,pylint,pyflakes,mccabe'],
+      \ 'pydocstyle,pycodestyle,pylint,pyflakes,mccabe', '--ignore',
+      \ 'D203,D213'],
       \ 'errorformat': neomake#makers#ft#python#pylama()['errorformat'],
       \ }
 autocmd! BufWritePost * Neomake
