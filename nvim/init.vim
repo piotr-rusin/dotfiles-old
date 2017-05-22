@@ -1,3 +1,8 @@
+" for formatting bulleted lists and numbered lists
+set autoindent
+set formatoptions+=n
+set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\|\\*\\)\\s*
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle
