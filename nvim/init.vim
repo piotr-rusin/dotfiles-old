@@ -6,6 +6,7 @@ set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\|\\*\\)\\s*
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle
+
 call vundle#begin()
 
 Plugin 'gmarik/vundle'
