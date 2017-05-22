@@ -41,6 +41,7 @@ link_contents fish .config/fish
 ln -sf "$dotfiles/idle.py" "$HOME/.virtualenvs"
 ln -sf "$dotfiles/nvim" "$HOME/.config"
 ln -sf "$dotfiles/composer.json" "$HOME/.config/composer"
+ln -sf "$dotfiles/termite" "$HOME/.config"
 
 echo "Configuring git"
 
