@@ -24,7 +24,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'Shougo/deoplete.nvim'
 " Requires jedi python package
 Plugin 'zchee/deoplete-jedi'
-" Requires ternjs node.js package
+" Requires tern node.js package
 Plugin 'carlitux/deoplete-ternjs'
 
 " Provides linting.
