@@ -47,7 +47,6 @@ Plugin 'jmcantrell/vim-virtualenv'
 
 " Color schemes:
 Plugin 'rakr/vim-one'
-Plugin 'joshdick/onedark.vim' " with set t_Co=256
 
 call vundle#end()
 filetype plugin indent on
@@ -67,7 +66,6 @@ set lazyredraw
 set ruler
 set showmatch
 
-" set t_Co=256
 set termguicolors
 set background=dark
 colorscheme one
