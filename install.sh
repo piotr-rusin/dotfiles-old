@@ -36,8 +36,10 @@ link_contents() {
 
 echo "Creating symbolic links"
 
+mkdir -p "$HOME/.virtualenvs"
 ln -sf "$dotfiles/idle.py" "$HOME/.virtualenvs"
 ln -sf "$dotfiles/nvim" "$HOME/.config"
+mkdir -p "$HOME/.config/composer"
 ln -sf "$dotfiles/composer.json" "$HOME/.config/composer"
 ln -sf "$dotfiles/termite" "$HOME/.config"
 
