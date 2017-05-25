@@ -3,6 +3,8 @@ set autoindent
 set formatoptions+=n
 set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\|\\*\\)\\s*
 
+set mouse=a
+
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle
