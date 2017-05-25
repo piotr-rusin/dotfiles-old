@@ -45,5 +45,4 @@ ln -sf "$dotfiles/termite" "$HOME/.config"
 
 echo "Configuring git"
 
-git config --global core.editor nvim
-
+git config --global core.editor "nvim -u $HOME/.config/nvim/git_init.vim"
