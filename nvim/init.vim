@@ -6,51 +6,46 @@ set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\|\\*\\)\\s*
 set mouse=a
 
 set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
 
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'gmarik/vundle'
-Plugin 'scrooloose/nerdtree'
-Plugin 'vim-airline/vim-airline'
-Plugin 'jeffkreeftmeijer/vim-numbertoggle'
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 
 " Git-related:
-Plugin 'airblade/vim-gitgutter'
-Plugin 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
 
 " Providing autocompletion:
-Plugin 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim'
 " Requires jedi python package
-Plugin 'zchee/deoplete-jedi'
+Plug 'zchee/deoplete-jedi'
 " Requires tern node.js package
-Plugin 'carlitux/deoplete-ternjs'
+Plug 'carlitux/deoplete-ternjs'
 
 " Provides linting.
 " Uses node.js packages: jshint, jscs, eslint, csslint, stylelint,
 " tidy, htmlhint
 " Uses python packages: pylama, pydocstyle, pycodestyle, pylint,
 " pyflakes, mccabe
-Plugin 'neomake/neomake'
+Plug 'neomake/neomake'
 
 " Editing tools:
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'mattn/emmet-vim'
-Plugin 'ntpeters/vim-better-whitespace'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mattn/emmet-vim'
+Plug 'ntpeters/vim-better-whitespace'
 
 " Syntax highliting, language-specific commands and tools:
-Plugin 'dag/vim-fish'
-Plugin 'lepture/vim-jinja'
-Plugin 'irrationalistic/vim-tasks'
-Plugin 'jmcantrell/vim-virtualenv'
+Plug 'dag/vim-fish'
+Plug 'lepture/vim-jinja'
+Plug 'irrationalistic/vim-tasks'
+Plug 'jmcantrell/vim-virtualenv'
 
 " Color schemes:
-Plugin 'rakr/vim-one'
+Plug 'rakr/vim-one'
 
-call vundle#end()
-filetype plugin indent on
-syntax on
+call plug#end()
 
 " backups and other junky files
 set backupdir=~/.vim/backup     " get backups outta here
