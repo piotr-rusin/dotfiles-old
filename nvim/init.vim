@@ -75,6 +75,10 @@ let g:one_allow_italics = 1
 
 let g:airline_powerline_fonts = 1
 let g:airline_exclude_preview = 1
+let g:airline_left_sep = ' '
+let g:airline_left_alt_sep = ' '
+let g:airline_right_sep = ' '
+let g:airline_right_alt_sep = ' '
 
 autocmd VimEnter * NERDTree
 autocmd BufEnter * NERDTreeMirror
