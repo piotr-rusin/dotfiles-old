@@ -69,7 +69,7 @@ set showmatch
 
 " set t_Co=256
 set termguicolors
-set background=light
+set background=dark
 colorscheme one
 let g:one_allow_italics = 1
 
