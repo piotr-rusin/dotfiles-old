@@ -31,6 +31,13 @@ rm ~/.zshrc # remove zshrc created by Oh-My-Zsh
 echo "Creating a symbolic link to .zshrc"
 ln -sf $CURRENTDIR/.zshrc ~
 
+echo "Creating symbolic links to zsh plugins"
+ZSH_CUSTOM_PLUGINS=~/.oh-my-zsh/custom/plugins
+mkdir -p $ZSH_CUSTOM_PLUGINS
+ln -sf $CURRENTDIR/base16-shell $ZSH_CUSTOM_PLUGINS
+
+echo "Configuring shell and vim theme..."
+/bin/zsh -i -c base16_materia
 
 echo "Configuring git"
 git config --global core.editor "nvim -u $HOME/.config/nvim/git_init.vim"
