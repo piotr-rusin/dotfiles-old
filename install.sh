@@ -35,6 +35,7 @@ echo "Creating symbolic links to zsh plugins"
 ZSH_CUSTOM_PLUGINS=~/.oh-my-zsh/custom/plugins
 mkdir -p $ZSH_CUSTOM_PLUGINS
 ln -sf $CURRENTDIR/base16-shell $ZSH_CUSTOM_PLUGINS
+ln -sf $CURRENTDIR/zsh-autosuggestions $ZSH_CUSTOM_PLUGINS
 
 echo "Configuring shell and vim theme..."
 /bin/zsh -i -c base16_materia
