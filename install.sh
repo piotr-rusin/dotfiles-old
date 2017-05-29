@@ -14,27 +14,16 @@ then
     abort
 fi
 
-
-dotfiles="$HOME/.dotfiles"
-
-if [ -d $dotfiles ] && ! [ -L $dotfiles ]; then
-    echo "$dotfiles already exists, and it's a directory."
-    abort
-fi
-
-
-echo "Creating a symbolic link from $current_dir to $dotfiles"
-ln -Tsf $(pwd) $dotfiles
-
+CURRENTDIR=$(pwd)
 
 echo "Creating symbolic links"
 
 mkdir -p "$HOME/.virtualenvs"
-ln -sf "$dotfiles/idle.py" "$HOME/.virtualenvs"
-ln -sf "$dotfiles/nvim" "$HOME/.config"
+ln -sf "$CURRENTDIR/idle.py" "$HOME/.virtualenvs"
+ln -sf "$CURRENTDIR/nvim" "$HOME/.config"
 mkdir -p "$HOME/.config/composer"
-ln -sf "$dotfiles/composer.json" "$HOME/.config/composer"
-ln -sf "$dotfiles/termite" "$HOME/.config"
+ln -sf "$CURRENTDIR/composer.json" "$HOME/.config/composer"
+ln -sf "$CURRENTDIR/termite" "$HOME/.config"
 
 echo "Configuring git"
 
