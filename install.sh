@@ -18,12 +18,12 @@ CURRENTDIR=$(pwd)
 
 echo "Creating symbolic links"
 
-mkdir -p "$HOME/.virtualenvs"
-ln -sf "$CURRENTDIR/idle.py" "$HOME/.virtualenvs"
-ln -sf "$CURRENTDIR/nvim" "$HOME/.config"
-mkdir -p "$HOME/.config/composer"
-ln -sf "$CURRENTDIR/composer.json" "$HOME/.config/composer"
-ln -sf "$CURRENTDIR/termite" "$HOME/.config"
+mkdir -p $HOME/.virtualenvs
+ln -sf $CURRENTDIR/idle.py $HOME/.virtualenvs
+ln -sf $CURRENTDIR/nvim $HOME/.config
+mkdir -p $HOME/.config/composer
+ln -sf $CURRENTDIR/composer.json $HOME/.config/composer
+ln -sf $CURRENTDIR/termite $HOME/.config
 
 echo "Configuring git"
 
