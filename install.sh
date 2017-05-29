@@ -26,13 +26,6 @@ fi
 echo "Creating a symbolic link from $current_dir to $dotfiles"
 ln -Tsf $(pwd) $dotfiles
 
-link_contents() {
-    destination="$HOME/$2"
-
-    mkdir -p $destination
-    ln -snf "$dotfiles/$1/"* $destination
-}
-
 
 echo "Creating symbolic links"
 
