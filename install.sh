@@ -5,7 +5,6 @@ abort() {
     exit
 }
 
-
 echo "This script may overwrite files in your home directory."
 read -p "Are you sure you want to continue? (Y/n)" -n 1 -r
 echo ""
