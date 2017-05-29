@@ -1,0 +1,9 @@
+Xcursor.theme: Breeze-White
+
+URxvt.letterSpace: 1
+URxvt.font: xft:Source Code Pro for Powerline:size=10
+URxvt*scrollColor: #37474F
+URxvt*scrollBar_right: true
+URxvt*scrollstyle: plain
+URxvt*scrollBar_floating: true
+

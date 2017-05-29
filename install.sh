@@ -22,7 +22,7 @@ ln -sf $CURRENTDIR/idle.py ~/.virtualenvs
 ln -sf $CURRENTDIR/nvim ~/.config
 mkdir -p ~/.config/composer
 ln -sf $CURRENTDIR/composer.json ~/.config/composer
-ln -sf $CURRENTDIR/termite ~/.config
+ln -sf $CURRENTDIR/.Xresources ~
 
 echo "Configuring git"
 
