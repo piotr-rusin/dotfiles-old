@@ -7,6 +7,7 @@ Plug 'jeffkreeftmeijer/vim-numbertoggle'
 Plug 'rakr/vim-one'
 Plug 'chriskempson/base16-vim'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'NLKNguyen/papercolor-theme'
 
 " Git-related
 Plug 'tpope/vim-fugitive'

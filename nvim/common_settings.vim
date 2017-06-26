@@ -25,20 +25,26 @@ set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\|\\*\\)\\s*
 set mouse=a
 
 " Plugin-related settings:
-set background=dark
-" Using a theme set with base16_* command
-" (provided https://github.com/chriskempson/base16-shell is installed)
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+set t_Co=256
 
-" manually setting airline theme
-" TODO: test alternatives:
-" * base16_oceanicnext
-" * tomorrow
-" * ubaryd
-let g:airline_theme='base16'
+set background=light
+colorscheme PaperColor
+
+let g:PaperColor_Theme_Options = {
+  \   'language': {
+  \     'python': {
+  \       'highlight_builtins' : 1
+  \     },
+  \     'cpp': {
+  \       'highlight_standard_library': 1
+  \     },
+  \     'c': {
+  \       'highlight_builtins' : 1
+  \     }
+  \   }
+  \ }
+
+let g:airline_theme='papercolor'
 let g:airline_powerline_fonts = 1
 let g:airline_exclude_preview = 1
 let g:airline_left_sep = ' '
