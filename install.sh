@@ -15,6 +15,14 @@ fi
 
 CURRENTDIR=$(pwd)
 
+echo "Installing Nerd Fonts"
+
+cd $CURRENTDIR/nerd-fonts
+
+./install.sh
+
+cd $CURRENTDIR
+
 echo "Creating symbolic links"
 
 mkdir -p ~/.virtualenvs
