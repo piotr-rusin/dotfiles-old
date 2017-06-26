@@ -32,6 +32,9 @@ mkdir -p ~/.config/composer
 ln -sf $CURRENTDIR/composer.json ~/.config/composer
 ln -sf $CURRENTDIR/.Xresources ~
 
+mkdir -p ~/.config/i3
+ln -sf $CURRENTDIR/i3config ~/.config/i3/config
+
 echo "Installing Oh-My-Zsh"
 sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
 rm ~/.zshrc # remove zshrc created by Oh-My-Zsh
