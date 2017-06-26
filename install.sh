@@ -31,6 +31,8 @@ ln -sf $CURRENTDIR/nvim ~/.config
 mkdir -p ~/.config/composer
 ln -sf $CURRENTDIR/composer.json ~/.config/composer
 ln -sf $CURRENTDIR/.Xresources ~
+mkdir -p ~/.config/i3status
+ln -sf $CURRENTDIR/i3status.conf ~/.config/i3status/config.conf
 
 mkdir -p ~/.config/i3
 ln -sf $CURRENTDIR/i3config ~/.config/i3/config
