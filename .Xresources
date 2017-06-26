@@ -30,7 +30,7 @@ URxvt.color15: #F5F5F5
 
 
 URxvt.letterSpace: 1
-URxvt.font: xft:Source Code Pro for Powerline:size=10
+URxvt.font: xft:Source Code Pro for Powerline:size=10,xft:SauceCodePro Nerd Font:size=10
 URxvt*scrollColor: #E4E4E4
 URxvt*scrollBar_right: true
 URxvt*scrollstyle: plain
