@@ -36,7 +36,7 @@ bindsym $mod+Return exec rxvt-unicode
 bindsym $mod+Shift+q kill
 
 # start j4-dmenu-desktop (a program launcher)
-bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -fn 'SauceCodePro Nerd Font-10' -nb '#EEE' -nf '#4D4D4C' -sb '#4271AE' -sf '#EEE'"
+bindsym $mod+d exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -fn 'SauceCodePro Nerd Font-10' -nb '#EEE' -nf '#4D4D4C' -sb '#4271AE' -sf '#EEE'"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
