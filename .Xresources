@@ -33,7 +33,7 @@ URxvt.letterSpace: 1
 URxvt.font: xft:Source Code Pro for Powerline:size=10,xft:SauceCodePro Nerd Font:size=10
 ! scrollbar width
 URxvt*thickness: 10
-URxvt*scrollColor: #E4E4E4
+URxvt*scrollColor: #C4C4C4
 URxvt*scrollBar_right: true
 URxvt*scrollstyle: plain
 URxvt*scrollBar_floating: true
