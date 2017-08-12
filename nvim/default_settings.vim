@@ -1,8 +1,7 @@
 " Settings used by the default configuration of vim
 
 " General settings:
-autocmd FileType html,jinja setlocal shiftwidth=2 tabstop=2
-autocmd FileType css,javascript,tasks setlocal expandtab shiftwidth=2 tabstop=2
+autocmd FileType html,jinja,css,javascript,tasks setlocal expandtab shiftwidth=2 softtabstop=2
 autocmd FileType python,fish setlocal expandtab shiftwidth=4 softtabstop=4
 
 autocmd BufWritePre * StripWhitespace
