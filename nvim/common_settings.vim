@@ -24,6 +24,10 @@ set formatlistpat=^\\s*\\(\\d\\+[\\]:.)}\\t\ ]\\|-\\|\\*\\)\\s*
 
 set mouse=a
 
+" Show non-printing characters:
+:set listchars=eol:¬,tab:»»,trail:~,extends:>,precedes:<,space:·
+:set list
+
 " Plugin-related settings:
 set t_Co=256
 
